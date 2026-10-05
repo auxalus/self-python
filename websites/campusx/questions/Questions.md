@@ -80,3 +80,4 @@ This list follows the problem scripts currently in this folder (01-78).
 76. [Swap keys for maximum and minimum values](76%20-%20swap%20max%20min%20dict.py): In a dictionary, swap the values associated with the maximum and minimum values (for example, `{a: 1, b: 2, c: 3}` becomes `{a: 3, b: 2, c: 1}`).
 77. [Login and registration menu](77%20-%20login%20and%20reg.py): Create a menu-driven dummy program for user registration and login.
 78. [Integer to string without `str()`](78%20-%20int%20to%20string%20without%20str%28%29.py): Convert an integer to a string without using `str()`.
+79. Write a program that take a user input of three angles and will find out whether it can form a triangle or not.
