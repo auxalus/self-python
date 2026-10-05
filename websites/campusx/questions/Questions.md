@@ -81,3 +81,4 @@ This list follows the problem scripts currently in this folder (01-78).
 77. [Login and registration menu](77%20-%20login%20and%20reg.py): Create a menu-driven dummy program for user registration and login.
 78. [Integer to string without `str()`](78%20-%20int%20to%20string%20without%20str%28%29.py): Convert an integer to a string without using `str()`.
 79. Write a program that take a user input of three angles and will find out whether it can form a triangle or not.
+80.  Write a program that will take user input of cost price and selling price and determines whether its a loss or a profit.
