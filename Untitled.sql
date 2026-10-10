@@ -1,0 +1,91 @@
+CREATE DATABASE college1;
+SHOW DATABASES;
+USE college1;
+CREATE TABLE Emplyee(EMPID INT , FirstName VARCHAR(10),LastName VARCHAR(10),EmpAge INT,EmpZone VARCHAR(10));
+
+
+-- Here Multiple lines are inserted
+INSERT INTO Emplyee 
+(EMPID,FirstName,LastName,EmpAge,EmpZone)  
+VALUES
+(1,'Riya','Joshi',20,'North'),
+(2,'Rohan','Sharma',21,'West'),
+(3,'Rahul','Patil','20','East');
+
+-- Here single line is inserted
+INSERT INTO Emplyee VALUES(4,'VINAY','MOHAN',19,NULL);
+SET SQL_SAFE_UPDATES = 0;
+UPDATE Emplyee SET EmpZone='East' WHERE EMPID=1;
+UPDATE Emplyee SET EmpZone='West' ,EmpAge=22 WHERE EMPID=2;
+
+UPDATE Emplyee SET EmpAge=24 WHERE EMPID=3;
+UPDATE Emplyee SET FirstName='Montu' WHERE EMPID=1;
+DELETE FROM Emplyee  WHERE EMPID=1;
+UPDATE Emplyee SET EmpAge=26 WHERE EMPID=2;
+
+SELECT EMPID , EmpAge FROM Emplyee;
+DROP DATABASE college1;
+CREATE DATABASE college1;
+USE college1;
+
+CREATE TABLE Emplyee3(
+EMPID INT NOT NULL , FirstName VARCHAR(10),
+LastName VARCHAR(10),EmpAge INT,EmpZone VARCHAR(10) , CHECK (EmpAge>20));
+
+INSERT INTO Emplyee3
+(EMPID,FirstName,LastName,EmpAge,EmpZone)  
+VALUES
+(1,'Riya','Joshi',20,'North'),
+(1,'Rohan','sharma',21,'West'),
+(3,'Rahul','Patil','20','East');
+
+ALTER TABLE Emplyee3   ADD COLUMN SALARY INT;
+ALTER TABLE Emplyee3 DROP COLUMN SALARY;
+
+ALTER TABLE Emplyee3 ADD COLUMN SALARY INT,ADD CHECK(SALARY>2000);
+
+INSERT INTO Emplyee3 VALUES(4,'ROHAN','BHAT',34,'WEST',1500);
+SHOW CREATE TABLE Emplyee3;
+ALTER TABLE Emplyee3 DROP CHECK Emplyee3_chk_2;
+DROP TABLE Emplyee3;
+
+
+CREATE TABLE EMPLOYEE1(
+EMPID INT , FirstName VARCHAR(10),
+LastName VARCHAR(10),EmpAge INT,EmpZone VARCHAR(10));
+
+ALTER TABLE EMPLOYEE1 ADD COLUMN SALARY INT;
+ALTER TABLE EMPLOYEE1 DROP  SALARY;
+
+ALTER TABLE EMPLOYEE1 ADD COLUMN SALARY INT , ADD CHECK (SALARY>=2000);
+
+INSERT INTO EMPLOYEE1
+(EMPID,FirstName,LastName,EmpAge,EmpZone)  
+VALUES
+(1,'Riya','Joshi',20,'North',2500),
+(1,'Rohan','sharma',21,'West',1500),
+(3,'Rahul','Patil','20','East',1000);
+SHOW CREATE TABLE EMPLOYEE1;
+
+
+
+
+CREATE TABLE EMPLOYEE7(
+EMPID INT , FirstName VARCHAR(10),
+LastName VARCHAR(10),EmpAge INT, SALARY INT);
+
+ALTER TABLE EMPLOYEE7 ADD CONSTRAINT chk_EmpAge_salary CHECK(EmpAge >20 AND SALARY >=5000);
+SHOW CREATE TABLE EMPLOYEE7;
+
+INSERT INTO EMPLOYEE7 VALUES
+(1,'RAHUL','SHARMA',23,4000),
+(2,'VINAY','SHARMA',25,4000);
+ALTER TABLE EMPLOYEE7 DROP CHECK chk_EmpAGE_salary;
+drop table EMPLOYEE7
+
+-- creating the different table called employee4 table
+
+drop database college1;
+
+
+
