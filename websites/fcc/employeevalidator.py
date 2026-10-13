@@ -32,3 +32,8 @@ email_user = clean_email[:at_pos]
 
 print(f'Email: {clean_email}')
 print(f'Username: {email_user}')
+
+phone = '123-456-7890'
+phone_clean = phone.replace('-', '')
+print(f'Phone with dashes: {phone}')
+print(f'Phone without dashes: {phone_clean}')
