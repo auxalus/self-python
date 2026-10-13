@@ -9,3 +9,6 @@ print(f'Username: {username}')
 
 has_at = '@' in email
 print(f'Has @ symbol: {has_at}')
+
+has_com = '.com' in email
+print(f'Has .com: {has_com}')
