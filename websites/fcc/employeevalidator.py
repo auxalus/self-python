@@ -26,3 +26,9 @@ print(f"Cleaned email: '{clean_email}'")
 
 name_badge = clean_name.upper()
 print(f'Name badge: {name_badge}')
+
+at_pos = clean_email.find('@')
+email_user = clean_email[:at_pos]
+
+print(f'Email: {clean_email}')
+print(f'Username: {email_user}')
